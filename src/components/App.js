@@ -57,7 +57,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h2>Add Your Task</h2>
+        <h2>{"Add your tasks".toUpperCase()}</h2>
         <AddTask add={this.addTask} tasks={this.state.tasks} />
         <TaskList
           tasks={this.state.tasks}
