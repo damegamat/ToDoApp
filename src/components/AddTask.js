@@ -46,15 +46,19 @@ class AddTask extends Component {
           placeholder="add task "
           value={this.state.text}
         ></input>
-        <input
-          name="checked"
-          onChange={this.handleChange}
-          id="priority"
-          type="checkbox"
-          checked={this.state.checked}
-        ></input>
-        <label htmlFor=" priority">Priority</label>
-        <div>
+        <div className="priority">
+          <input
+            name="checked"
+            onChange={this.handleChange}
+            id="priority"
+            type="checkbox"
+            checked={this.state.checked}
+          ></input>
+          <div></div>
+          <label htmlFor="priority">Priority</label>
+        </div>
+
+        <div className="date">
           <label htmlFor="date"> Lead time</label>
           <input
             name="date"
@@ -67,7 +71,9 @@ class AddTask extends Component {
           ></input>
         </div>
 
-        <button onClick={this.handleAdd}>Add</button>
+        <button className="add" onClick={this.handleAdd}>
+          Add
+        </button>
       </div>
     );
   }
