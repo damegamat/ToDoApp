@@ -20,16 +20,6 @@ class AddTask extends Component {
   };
   handleAdd = () => {
     const { text, checked, date } = this.state;
-    const checkTask = this.props.tasks.filter(task => task.text === text);
-    if (checkTask.length > 0) {
-      alert("takie zadanie istnieje");
-      this.setState({
-        text: "",
-        checked: false,
-        date: this.minDate
-      });
-      return;
-    }
     if (text.length > 0) {
       const add = this.props.add(text, date, checked);
       if (add) {
