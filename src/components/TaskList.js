@@ -50,7 +50,7 @@ const TaskList = props => {
       </div>
 
       <div className="deactive">
-        <h3>Zadania do zrobione {deactiveTasks.length}</h3>
+        <h3>Zadania zrobione {deactiveTasks.length}</h3>
         {deactiveTasks.length > 5 && (
           <span>You can see only last 5 tasks </span>
         )}
