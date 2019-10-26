@@ -55,7 +55,7 @@ class AddTask extends Component {
         ></input>
         <label htmlFor=" priority">Priority</label>
         <div>
-          <label htmlFor="date"> Do kiedy zrobić</label>
+          <label htmlFor="date"> Lead time</label>
           <input
             name="date"
             onChange={this.handleChange}
@@ -67,7 +67,7 @@ class AddTask extends Component {
           ></input>
         </div>
 
-        <button onClick={this.handleAdd}>Dodaj</button>
+        <button onClick={this.handleAdd}>Add</button>
       </div>
     );
   }

@@ -8,7 +8,7 @@ const Task = props => {
       <div>
         <p>
           <strong className={important ? "priority" : ""}>{text}</strong>
-          do <span>{date}</span>
+          to <span>{date}</span>
           <button onClick={() => props.status(id)}>Done</button>
           <button onClick={() => props.delete(id)}>X</button>
         </p>
@@ -20,8 +20,8 @@ const Task = props => {
       <div>
         <p>
           <strong>{text}</strong>
-          <em> do {date}</em>
-          <span>Ukończono {finishTime}</span>
+          <em> to {date}</em>
+          <span>Completed {finishTime}</span>
           <button onClick={() => props.delete(id)}>X</button>
         </p>
       </div>

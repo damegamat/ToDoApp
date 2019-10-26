@@ -41,7 +41,7 @@ const TaskList = props => {
   return (
     <>
       <div className="active">
-        <h1>Zadania do zrobienia</h1>
+        <h1>Tasks to Do</h1>
         {activeTasks.length > 0 ? (
           activeTasks
         ) : (
@@ -50,10 +50,8 @@ const TaskList = props => {
       </div>
 
       <div className="deactive">
-        <h3>Zadania zrobione {deactiveTasks.length}</h3>
-        {deactiveTasks.length > 5 && (
-          <span>You can see only last 5 tasks </span>
-        )}
+        <h3>Done {deactiveTasks.length}</h3>
+        {deactiveTasks.length > 5 && <span>Last 5 tasks</span>}
         {deactiveTasks.slice(0, 5)}
       </div>
     </>
