@@ -8,6 +8,7 @@ class App extends Component {
     tasks: []
   };
   counter = this.state.tasks.length;
+
   deleteTask = id => {
     let tasks = [...this.state.tasks];
     tasks = tasks.filter(task => task.id !== id);
@@ -28,25 +29,36 @@ class App extends Component {
     });
   };
   addTask = (text, date, priority) => {
-    const task = {
-      id: this.counter,
-      text,
-      date,
-      important: priority,
-      active: true,
-      finishDate: null
-    };
-    this.counter++;
-    this.setState(prevState => ({
-      tasks: [...prevState.tasks, task]
-    }));
-    return true;
+    const actualTasks = [...this.state.tasks];
+    let flag = false;
+    actualTasks.forEach(item => {
+      if (item.text === text) {
+        return (flag = true);
+      }
+    });
+    if (flag) {
+      alert("Exist");
+    } else {
+      const task = {
+        id: this.counter,
+        text,
+        date,
+        important: priority,
+        active: true,
+        finishDate: null
+      };
+      this.counter++;
+      this.setState(prevState => ({
+        tasks: [...prevState.tasks, task]
+      }));
+      return true;
+    }
   };
   render() {
     return (
       <div className="App">
         <h2>Add Your Task</h2>
-        <AddTask add={this.addTask} />
+        <AddTask add={this.addTask} tasks={this.state.tasks} />
         <TaskList
           tasks={this.state.tasks}
           status={this.changeTaskStatus}
