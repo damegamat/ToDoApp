@@ -1,0 +1,29 @@
+.active,
+.deactive {
+  width: 75%;
+  margin: 0 auto;
+}
+.deactive {
+  border-top: 2px solid rgba(15, 32, 29, 0.3);
+  padding-top: 5px;
+}
+.active h1 {
+  font-size: 1.6rem;
+}
+.active h1 + p {
+  margin: 10px;
+  font-size: 1.2rem;
+}
+
+.deactive h3 {
+  font-size: 1.4rem;
+}
+.deactive span {
+  margin: 0;
+}
+@media (max-width: 620px) {
+  .active,
+  .deactive {
+    width: 90%;
+  }
+}

@@ -47,8 +47,8 @@
 
 input[type="checkbox"] {
   position: relative;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   margin: 0 auto;
   cursor: pointer;
   opacity: 0.7;
@@ -58,15 +58,15 @@ input[type="checkbox"] {
 input[type="checkbox"]::after {
   content: "";
   position: absolute;
-  width: 26px;
-  height: 26px;
+  width: 20px;
+  height: 20px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
   border-radius: 5px;
   background-color: rgb(232, 65, 24, 0.5);
-  box-shadow: 0px 0px 0px 7px rgb(232, 65, 24, 1);
+  box-shadow: 0px 0px 0px 5px rgb(232, 65, 24, 1);
   transition: 0.5s;
 }
 input[type="checkbox"]:checked {
@@ -75,7 +75,7 @@ input[type="checkbox"]:checked {
 
 input[type="checkbox"]:checked::after {
   background-color: transparent;
-  box-shadow: 0px 0px 4px 7px rgb(232, 65, 24, 1);
+  box-shadow: 0px 0px 3px 5px rgb(232, 65, 24, 1);
 }
 .priority {
   color: rgb(156, 5, 0);
@@ -94,13 +94,16 @@ input[type="checkbox"]:checked::after {
   animation-play-state: paused;
 }
 .add:hover {
-  animation: buttonAnimation linear infinite 3s alternate;
+  animation: buttonAnimation linear infinite 5s alternate;
   animation-play-state: running;
 }
 
 @keyframes buttonAnimation {
   0% {
     box-shadow: inset 0px 0px 0px 2px rgb(54, 8, 8);
+  }
+  10% {
+    box-shadow: inset 0px 0px 5px 2px rgb(54, 8, 8);
   }
   20% {
     box-shadow: inset 0px 0px 5px 2px rgb(54, 8, 8);
@@ -109,6 +112,12 @@ input[type="checkbox"]:checked::after {
     box-shadow: inset 0px 0px 10px 2px rgb(54, 8, 8);
   }
   60% {
+    box-shadow: inset 0px 0px 10px 2px rgb(54, 8, 8);
+  }
+  80% {
+    box-shadow: inset 0px 0px 5px 2px rgb(54, 8, 8);
+  }
+  90% {
     box-shadow: inset 0px 0px 5px 2px rgb(54, 8, 8);
   }
   100% {
