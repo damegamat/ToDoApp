@@ -30,7 +30,7 @@ class AddTask extends Component {
         });
       }
     } else {
-      alert("Wpisz zadanie");
+      alert("Enter the task");
     }
   };
 
@@ -72,7 +72,7 @@ class AddTask extends Component {
         </div>
 
         <button className="add" onClick={this.handleAdd}>
-          Add
+          {"Add".toUpperCase()}
         </button>
       </div>
     );
