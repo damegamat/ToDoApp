@@ -1,5 +1,6 @@
 import React from "react";
 import Task from "./Task";
+import "./TaskList.css";
 
 const TaskList = props => {
   const active = props.tasks.filter(task => task.active);
@@ -41,7 +42,7 @@ const TaskList = props => {
   return (
     <>
       <div className="active">
-        <h1>Tasks to do</h1>
+        <h1>{"Tasks to do".toUpperCase()}</h1>
         {activeTasks.length > 0 ? (
           activeTasks
         ) : (
@@ -50,7 +51,9 @@ const TaskList = props => {
       </div>
 
       <div className="deactive">
-        <h3>Done {deactiveTasks.length}</h3>
+        <h3>
+          {"Done".toUpperCase()} {deactiveTasks.length}
+        </h3>
         {deactiveTasks.length > 5 && <span>Last 5 tasks</span>}
         {deactiveTasks.slice(0, 5)}
       </div>
