@@ -54,7 +54,6 @@ class AddTask extends Component {
             type="checkbox"
             checked={this.state.checked}
           ></input>
-          <div></div>
           <label htmlFor="priority">Priority</label>
         </div>
 
